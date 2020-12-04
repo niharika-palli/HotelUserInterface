@@ -13,6 +13,7 @@ import reportWebVitals from './reportWebVitals';
 
 import Form from './Booking';
 import Formcheck from './CheckBooking';
+import Formcan from './CancelBooking';
 import {
   BrowserRouter as Router,
   Switch,
@@ -34,12 +35,10 @@ function Default() {
     <div>
       
         <ul>
-          
-            <Link to="/booking">   Booking    </Link>
-          {/* </li>
-          <li> */}
-           <Link to="/checkbooking">   CheckBooking   </Link>
            <Link to="/hotel">Hotel</Link>
+            <Link to="/booking">   Booking    </Link>
+           <Link to="/checkbooking">   CheckBooking   </Link>
+           <Link to="/cancelbooking">CancelBooking</Link>
         </ul>
       
 
@@ -53,6 +52,9 @@ function Default() {
         <Route path="/checkbooking">
           <Formcheck/>
         </Route>
+        <Route path="/cancelbooking">
+          <Formcan/>
+         </Route> 
       </Switch>
     </div>
   </Router>
