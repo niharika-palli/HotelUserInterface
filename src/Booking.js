@@ -43,19 +43,19 @@ export default class Form extends React.Component {
           hotelid: this.state.hotelid,
           userid: this.state.userid,
       })
-      .then(response => alert(response.body));
+      .then(response => alert(response.body));alert("booking successful");
     }
 
 render() {
       return (
           <form onSubmit={this.submitHandler}>
-            <h1> Make Booking </h1>
+            <h1> Book your favourites Available 25 hotels </h1>
             <p>Enter your hotelid:</p>
             <input
               type="text"
               onChange={this.hotelidChangeHandler}
             />
-            <p>Enter your userid:</p>
+            <p>Enter your userid:extactly given at the time of login</p>
             <input
               type="text"
               onChange={this.useridChangeHandler}

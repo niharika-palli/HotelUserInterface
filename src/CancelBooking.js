@@ -25,14 +25,11 @@ export default class FormCan extends React.Component {
       render() {
         return (<div>
             <form onSubmit={this.submitHandler}>
-              <marquee>
               <h1>Cancel your Booking</h1>
-              </marquee>
               <p>Enter Booking iD:</p>
               <input
                 type="text"
                 onChange={this.bookingidChangeHandler}
-                placeholder="bookingid"
               />
                <p>
               <input type='submit' value="delete"/>
