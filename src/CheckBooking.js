@@ -34,11 +34,14 @@ export default class Formcheck extends React.Component {
       render() {
         return (<div>
             <form onSubmit={this.submitHandler}>
+              <marquee>
               <h1> First Look </h1>
+              </marquee>
               <p>Enter bookingid:</p>
               <input
                 type="text"
                 onChange={this.bookingidChangeHandler}
+                placeholder="bookingid"
               />
                <p>
               <input type='submit'/>
