@@ -6,27 +6,27 @@ export default class Formcheck extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            userid:null,
             bookingid: null,
             hotelid: null,
             city: null,
             hotelname: null,
-            userid:null,
             submitted: false
         }
     }
-    bookingidChangeHandler = (event) => {
-        this.setState({bookingid: event.target.value});
+    useridChangeHandler = (event) => {
+        this.setState({userid: event.target.value});
     }
 
     submitHandler = (event) => {
         event.preventDefault();
 
-        alert("You are submitting " + this.state.bookingid);
-        axios.get('http://localhost:8080/bookingconsole/viewbooking?bookingid='+this.state.bookingid)
+        alert("You are submitting " + this.state.userid);
+        axios.get('http://localhost:8080/book/database/?userid='+this.state.userid)
         .then(response => {
             console.log(response);
-            this.setState({submitted: true,bookingid:response.data.bookingid,hotelid: response.data.hotelid,userid:response.data.userid,hotelname:response.data.hotelname,city:response.data.city});
-            console.log('Latest: '+this.state.bookingid);
+            this.setState({submitted: true,userid:response.data[0].userid,hotelid: response.data[0].hotelid,bookingid:response.data[0].bookingid,hotelname:response.data[0].hotelname,city:response.data[0].city});
+            console.log('Latest: '+this.state.hotelid);
             
         });
       }
@@ -37,11 +37,11 @@ export default class Formcheck extends React.Component {
               <marquee>
               <h1> First Look </h1>
               </marquee>
-              <p>Enter bookingid:</p>
+              <p>Enter userid:</p>
               <input
                 type="text"
-                onChange={this.bookingidChangeHandler}
-                placeholder="bookingid"
+                onChange={this.useridChangeHandler}
+                placeholder="userid"
               />
                <p>
               <input type='submit'/>
@@ -57,12 +57,10 @@ export default class Formcheck extends React.Component {
 function Bookingdetails(props) {
     console.log('Booking Details: '+props);
     return (
-
-
     <div>
+    <p>userid:{props.value.userid}</p>  
     <p>booking id:{props.value.bookingid}</p>  
     <p>Hotel id: {props.value.hotelid}</p>
-    <p>userid:{props.value.userid}</p>
     <p>hotel name: {props.value.hotelname}</p>
     <p>City: {props.value.city}</p>
     </div>

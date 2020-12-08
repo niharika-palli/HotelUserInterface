@@ -34,7 +34,7 @@ export default class Formuser extends React.Component {
       event.preventDefault();
 
       alert("You are submitting " + this.state.userid + "," + this.state.username);
-      axios.post('http://localhost:8080/user/insertuser', {
+      axios.post('http://localhost:8080/user/keepuser', {
           userid: this.state.userid,
           username: this.state.username,
           mobilenumber:this.state.mobilenumber,
