@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Button from 'react-bootstrap/Button';
-import BorderWrapper from 'react-border-wrapper'
+
 
 /*ReactDOM.render(
   <React.StrictMode>
@@ -42,18 +42,23 @@ function Default() {
   return (
   
   <Router>
-    <div>
-      
-        <ul>   
-          <div>
+
+    <div className="new">
+   
+        <div>
+
+        <ul>
            <Link to="/hotel"><Button>  Hotel  </Button>  </Link>
-            <Link to="/booking"><Button>   Booking  </Button>  </Link>
+           <Link to="/booking"><Button>   Booking  </Button>  </Link>
            <Link to="/checkbooking"> <Button>   CheckBooking   </Button>   </Link>
            <Link to="/cancelbooking"><Button>  CancelBooking   </Button>   </Link>
            <Link to="/hoteldetails"><Button >  HotelDetails    </Button>   </Link>
            <Link to="/userlogin"><Button>   UserLogin    </Button>   </Link>
-           </div>
         </ul>
+
+        </div>
+        
+        
 
       <Switch>
         <Route path="/hotel">

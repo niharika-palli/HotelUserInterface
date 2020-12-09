@@ -15,7 +15,24 @@ code {
 body {
   margin: 0;
   font-style: italic;
-  background-image: url("hotelimage.jpg");
+  /*background-image: url("hotelimage.jpg");*/
+  height: 100vh;
+  
+  background-position:
+    top 10px left 10px,
+    top 10px right 10px,
+    bottom 10px right 10px,
+    bottom 10px left 10px;
+  
+  background-size: 86px;
+  background-repeat: no-repeat;
+  
+  background-image:
+    url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/angles-top-left.svg),
+    url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/angles-top-right.svg),
+    url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/angles-bottom-right.svg),
+    url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/angles-bottom-left.svg);
+  
 }
 .marquee{
   overflow: hidden;
@@ -28,4 +45,8 @@ table,th,td{
   border: 2px solid navy;
   border-collapse: collapse;
   padding: 10px;
+}
+
+.new{
+  text-align: center;
 }
