@@ -15,11 +15,17 @@ code {
 body {
   margin: 0;
   font-style: italic;
-  background-image: url("kalinga.jpg");
+  background-image: url("hotelimage.jpg");
 }
 .marquee{
   overflow: hidden;
   position: absolute;
   margin: auto;
   background:red;
+}
+
+table,th,td{
+  border: 2px solid navy;
+  border-collapse: collapse;
+  padding: 10px;
 }

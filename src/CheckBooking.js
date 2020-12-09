@@ -57,14 +57,38 @@ export default class Formcheck extends React.Component {
 function Bookingdetails(props) {
     console.log('Booking Details: '+props);
     return (
-    <div>
+      <div>
+        <table>
+   <tr>
+     <th>userid</th>
+     <th>bookingid</th>
+     <th>hotelid</th>
+     <th>hotelname</th>
+     <th>city</th>
+   </tr>
+       <tr> 
+        <td> {props.value.userid}</td>
+        <td> {props.value.bookingid}</td>
+        <td> {props.value.hotelid}</td>
+        <td> {props.value.hotelname}</td> 
+        <td> {props.value.city}</td>
+        </tr>
+        </table>
+      </div>
+        )
+
+
+
+
+
+    /*<div>
     <p>userid:{props.value.userid}</p>  
     <p>booking id:{props.value.bookingid}</p>  
     <p>Hotel id: {props.value.hotelid}</p>
     <p>hotel name: {props.value.hotelname}</p>
     <p>City: {props.value.city}</p>
     </div>
-    )
+    )*/
 }
 
 /*const App = props => { 

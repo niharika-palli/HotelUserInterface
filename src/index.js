@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Button from 'react-bootstrap/Button';
+import BorderWrapper from 'react-border-wrapper'
 
 /*ReactDOM.render(
   <React.StrictMode>
@@ -17,12 +19,15 @@ import Formcan from './CancelBooking';
 import Formfetch from './HotelDetails';
 import Formuser from './UserLogin';
 
+
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
 } from "react-router-dom";
+import { ButtonToolbar } from 'react-bootstrap';
+
 
 function Hotel() {
   return (
@@ -34,18 +39,21 @@ function Hotel() {
 
 
 function Default() {
-  return (<Router>
+  return (
+  
+  <Router>
     <div>
       
-        <ul>
-           <Link to="/hotel">Hotel</Link>
-            <Link to="/booking">   Booking    </Link>
-           <Link to="/checkbooking">   CheckBooking   </Link>
-           <Link to="/cancelbooking">CancelBooking</Link>
-           <Link to="/hoteldetails">HotelDetails</Link>
-           <Link to="/userlogin">UserLogin</Link>
+        <ul>   
+          <div>
+           <Link to="/hotel"><Button>  Hotel  </Button>  </Link>
+            <Link to="/booking"><Button>   Booking  </Button>  </Link>
+           <Link to="/checkbooking"> <Button>   CheckBooking   </Button>   </Link>
+           <Link to="/cancelbooking"><Button>  CancelBooking   </Button>   </Link>
+           <Link to="/hoteldetails"><Button >  HotelDetails    </Button>   </Link>
+           <Link to="/userlogin"><Button>   UserLogin    </Button>   </Link>
+           </div>
         </ul>
-      
 
       <Switch>
         <Route path="/hotel">
@@ -69,6 +77,7 @@ function Default() {
       </Switch>
     </div>
   </Router>
+
 );
 }
 
