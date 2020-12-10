@@ -32,7 +32,11 @@ export default class Formcheck extends React.Component {
       }
 
       render() {
-        return (<div>
+
+        return (
+        
+        
+        <div>
             <form onSubmit={this.submitHandler}>
               <marquee>
               <h1> First Look </h1>
